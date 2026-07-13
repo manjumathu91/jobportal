@@ -22,7 +22,7 @@ const JobList = () => {
             try {
                 setLoading(true); 
                 const queryString = new URLSearchParams(filters).toString();
-                const response = await axios.get(`http://localhost:8000/api/jobs/?${queryString}`);
+                const response = await axios.get(`https://vercel.app{queryString}`);
                 setJobs(response.data);
                 setLoading(false);
             } catch (error) {

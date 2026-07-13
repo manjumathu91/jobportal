@@ -22,7 +22,7 @@ const JobDetail = () => {
     const fetchJob = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/jobs/${id}/`
+          `https://vercel.app{id}/`
         );
         setJob(response.data);
       } catch (error) {
