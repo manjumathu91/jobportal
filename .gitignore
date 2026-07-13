@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.env
+
+media/
+
+job-portal-frontend/node_modules/
+job-portal-frontend/build/
+
+.vscode/
