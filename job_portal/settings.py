@@ -85,16 +85,17 @@ WSGI_APPLICATION = 'job_portal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+
+import dj_database_url
+import os
+
 DATABASES = {
-   'default': {
-'ENGINE': 'django.db.backends.mysql',
-'NAME': 'job_portal',
-'USER': 'root',
-'PASSWORD': '',
-'HOST': '127.0.0.1',
-'PORT': '3306',
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
-}
+
+
+
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
